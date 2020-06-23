@@ -7,10 +7,22 @@ function BookList(props) {
     ? <div className="error">{props.error}</div>
     : "";
 
+  const bookListings = props.books.map(book => {
+    return <BookListing
+      title={book.title}
+      img={book.img}
+      author={book.author}
+      price={book.price}
+      description={book.description}
+      key={book.id}
+      link={book.link}
+    />
+  });
+
   return (
     <ul className="book-list">
       {error}
-      <BookListing />
+      {bookListings}
     </ul>
   )
 }
