@@ -3,8 +3,13 @@ import BookListing from '../BookListing/BookListing';
 import './BookList.css';
 
 function BookList(props) {
+  const error = props.error
+    ? <div className="error">{props.error}</div>
+    : "";
+
   return (
-    <ul class="book-list">
+    <ul className="book-list">
+      {error}
       <BookListing />
     </ul>
   )

@@ -3,3 +3,8 @@
   list-style: none;
   max-width: 1000px;
 }
+
+.error{
+  text-align: center;
+  color: crimson;
+}
